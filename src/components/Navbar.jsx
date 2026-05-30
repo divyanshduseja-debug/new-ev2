@@ -18,8 +18,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <Link to="/" className="nav-brand" onClick={closeMenu}>
-        <Zap color="#4CAF50" size={32} />
-        <div>JAKHARS <span>POWER</span></div>
+        <img src="/logo.jpg" alt="Jakhar's Power Point" className="nav-logo-img" />
       </Link>
       
       {/* Desktop Links */}

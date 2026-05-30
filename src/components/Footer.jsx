@@ -6,8 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-brand">
-          <Zap color="#4CAF50" size={32} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '10px' }} />
-          JAKHARS <span>POWER POINT</span>
+          <img src="/logo.jpg" alt="Jakhar's Power Point" className="footer-logo-img" />
         </div>
         
         <div className="footer-links">

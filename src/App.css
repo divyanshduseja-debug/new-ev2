@@ -24,15 +24,12 @@
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--color-dark);
 }
 
-.nav-brand span {
-  color: var(--color-primary);
+.nav-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -377,6 +374,58 @@
   line-height: 1.6;
 }
 
+/* How It Works Section */
+.how-it-works-section {
+  padding: 100px 5%;
+  background-color: #f5f5f5;
+}
+
+.how-it-works-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 60px;
+}
+
+.hiw-step {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hiw-step.reverse {
+  flex-direction: row-reverse;
+}
+
+.hiw-image-wrapper {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.hiw-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hiw-text {
+  flex: 1;
+}
+
+.hiw-text h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.hiw-text p {
+  font-size: 1.2rem;
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+}
+
 /* Contact Section */
 .contact-section {
   padding: 60px 5%;
@@ -467,13 +516,15 @@
 }
 
 .footer-brand {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 900;
+  display: flex;
+  align-items: center;
 }
 
-.footer-brand span {
-  color: var(--color-primary);
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  filter: brightness(0) invert(1); /* makes the logo white if it has a transparent background, otherwise keep it normal. Assuming normal logo for now */
+  /* Remove filter if logo looks bad */
 }
 
 .footer-links {
