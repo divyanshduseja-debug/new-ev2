@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import evAppMockup from '../assets/ev_app_mockup.png';
+import evChargingCar from '../assets/ev_charging_car.png';
 
 export default function HowItWorks() {
   return (
@@ -24,7 +26,7 @@ export default function HowItWorks() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <img src="/ev_app_mockup.png" alt="Find Station App" className="hiw-image" />
+            <img src={evAppMockup} alt="Find Station App" className="hiw-image" />
           </motion.div>
           <motion.div 
             className="hiw-text"
@@ -47,7 +49,7 @@ export default function HowItWorks() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <img src="/ev_charging_car.png" alt="EV Charging" className="hiw-image" />
+            <img src={evChargingCar} alt="EV Charging" className="hiw-image" />
           </motion.div>
           <motion.div 
             className="hiw-text"

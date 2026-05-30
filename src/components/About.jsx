@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import dayImage from '../assets/day.png';
+import nightImage from '../assets/night.png';
 
 export default function About() {
   return (
@@ -30,7 +32,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <img src="/day.png" alt="EV Station during day" className="about-image" />
+            <img src={dayImage} alt="EV Station during day" className="about-image" />
           </motion.div>
         </div>
 
@@ -54,7 +56,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <img src="/night.png" alt="EV Station at night" className="about-image" />
+            <img src={nightImage} alt="EV Station at night" className="about-image" />
           </motion.div>
         </div>
 

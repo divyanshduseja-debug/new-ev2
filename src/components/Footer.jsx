@@ -1,12 +1,13 @@
 import React from 'react';
 import { Zap } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-brand">
-          <img src="/logo.jpg" alt="Jakhar's Power Point" className="footer-logo-img" />
+          <img src={logo} alt="Jakhar's Power Point" className="footer-logo-img" />
         </div>
         
         <div className="footer-links">

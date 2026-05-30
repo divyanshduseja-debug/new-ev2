@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.jpg';
 
 export default function Navbar() {
   const location = useLocation();
@@ -18,7 +19,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <Link to="/" className="nav-brand" onClick={closeMenu}>
-        <img src="/logo.jpg" alt="Jakhar's Power Point" className="nav-logo-img" />
+        <img src={logo} alt="Jakhar's Power Point" className="nav-logo-img" />
       </Link>
       
       {/* Desktop Links */}
