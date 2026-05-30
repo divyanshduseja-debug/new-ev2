@@ -61,11 +61,24 @@
   border-radius: 30px;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-cta:hover {
   background-color: var(--color-primary-light);
   transform: translateY(-2px);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: var(--color-dark);
 }
 
 .page-content {
@@ -490,26 +503,106 @@
   }
   .canvas-container {
     width: 100% !important;
-    opacity: 0.3;
+    opacity: 0.2; /* Fade background to ensure text readability */
   }
   .hero-content {
     z-index: 10;
   }
+  .about-row, .about-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .about-text ul li {
+    justify-content: center;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
+  /* Navbar */
   .nav-links {
-    display: none; /* simple mobile handling */
+    display: none;
   }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 2px solid var(--color-primary);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  .mobile-menu a {
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+  .mobile-menu a.active {
+    color: var(--color-primary);
+  }
+
+  /* Typography & Layout */
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
   }
   .hero-buttons {
     flex-direction: column;
+    gap: 15px;
   }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+  .features-section, .about-section, .contact-section {
+    padding: 60px 5%;
+  }
+  .network-section {
+    height: 600px;
+  }
+  .globe-container {
+    top: 250px;
+    height: 600px;
+  }
+  
+  /* Footer */
   .footer-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     text-align: center;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
